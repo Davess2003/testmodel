@@ -46,7 +46,7 @@ function App() {
         body: JSON.stringify({ message: input })
       });
 
-      const data = await response.json();
+      const data = await response.text();
 
       // n8n might return an array or a single object depending on the Respond to Webhook node
       const answer = Array.isArray(data) ? data[0] : data;
