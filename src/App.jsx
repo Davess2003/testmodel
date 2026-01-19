@@ -115,7 +115,9 @@ function App() {
                   {msg.role === 'ai' ? <Bot size={18} /> : <User size={18} />}
                 </div>
                 <div className="message-content">
-                  {msg.content}
+                  <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word', fontFamily: 'inherit', margin: 0 }}>
+                    {msg.content}
+                  </pre>
                 </div>
               </motion.div>
             ))}
